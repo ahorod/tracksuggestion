@@ -11,9 +11,10 @@ $(document).ready(function(){
 
 
   $("#form").submit(function(event) {
+    var nameInput = $("#name").val();
     var frontbackendInput = $("#front-back-end").val();
-    var focusInput = $("input:radio[name=focus]:checked").val();
-    var companysizeInput = $("#companysize").val();
+    // var focusInput = $("input:radio[name=focus]:checked").val();
+    // var companysizeInput = $("#companysize").val();
     var webappsInput = $("input:radio[name=ruby]:checked").val();
     var typeofsoftwareInput = $("#type-of-software").val();
     $("#ruby").hide();
@@ -24,16 +25,24 @@ $(document).ready(function(){
 
     if (frontbackendInput === "Back-end") {
       if (webappsInput === "yes"){
-        $("#ruby").show();
+      $("#ruby").prepend(nameInput + ",");
+      $("#ruby").show();
       }
       else {
-        if (typeofsoftwareInput === "Internal or business software"){ $("#c").show(); }
-        else if (typeofsoftwareInput === "Android applications") { $("#java").show(); }
-        else {$("#php").show();}
+        if (typeofsoftwareInput === "Internal or business software"){
+          $("#c").prepend(nameInput + ",");
+          $("#c").show(); }
+        else if (typeofsoftwareInput === "Android applications") {
+          $("#java").prepend(nameInput + ",");
+          $("#java").show(); }
+        else {
+          $("#php").prepend(nameInput + ",");
+          $("#php").show();}
       }
 
     }
     else {
+      $("#css").prepend(nameInput + ",");
       $("#css").show();
     }
     event.preventDefault();
