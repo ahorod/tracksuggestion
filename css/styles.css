@@ -1,11 +1,23 @@
-#design {
+#focus {
   display: none;
 }
 
-#design-course {
+#css {
   display: none;
 }
 
 #ruby {
+  display: none;
+}
+
+#java {
+  display: none;
+}
+
+#c {
+  display: none;
+}
+
+#php {
   display: none;
 }
