@@ -9,17 +9,20 @@
   </head>
   <body>
     <div class="container">
-      <div class="panel">
-        <h1>Welcome to career path helper</h1>
+      <div class="panel panel-primary">
+        <div class="panel-body bg-primary">
+          <h2>Welcome to career path helper</h2>
+        </div>
       </div>
-      <!--Name -->
-      <div class="panel">
+      <!--Question form  -->
+      <div class="panel panel-info">
+      <div class="panel-body bg-info">
+      <form id="form">
+      <!--Name-->
       <div class="form-group">
         <label for="name">Please enter your name</label>
         <input id="name" class="form-control" type="text">
       </div>
-      <!--Question Form  -->
-      <form id="form">
         <!--Question 1-->
         <div class="form-group">
           <label for="front-back-end">1. What type of development do you prefer?</label>
@@ -81,27 +84,39 @@
 
         <button type="submit" class="btn">Submit</button>
       </form>
-
-      <div id="ruby">
-        <p>Great</p>
-      </div>
-
-      <div id="java" class="courses">
-        <p>Java</p>
-      </div>
-
-      <div id="c" class="courses">
-        <p>C#</p>
-      </div>
-
-      <div id="php" class="courses">
-        <p>PHP</p>
-      </div>
-
-      <div id="css" class="courses">
-        <p>Css and design</p>
-      </div>
     </div>
+    </div>
+
+      <div id ="ruby" class="panel panel-success">
+        <div class="panel-body bg-success">
+            <p>Great</p>
+          </div>
+      </div>
+
+      <div id ="java" class="panel panel-success">
+        <div class="panel-body bg-success">
+            <p>java</p>
+          </div>
+      </div>
+
+      <div id ="c" class="panel panel-success">
+        <div class="panel-body bg-success">
+            <p>c#</p>
+          </div>
+      </div>
+
+      <div id ="php" class="panel panel-success">
+        <div class="panel-body bg-success">
+            <p>php</p>
+          </div>
+      </div>
+
+      <div id ="css" class="panel panel-success">
+        <div class="panel-body bg-success">
+            <p>css</p>
+          </div>
+      </div>
+
     </div>
   </body>
   </head>
