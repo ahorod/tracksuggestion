@@ -1,122 +1,123 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.0.js"></script>
     <script src="js/scripts.js"></script>
     <title>Track suggestion</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <div class="panel panel-primary">
-        <div class="panel-body bg-primary">
-          <h2>Welcome to career path finder</h2>
+        <div class="panel panel-primary">
+            <div class="panel-body bg-primary">
+                <h2>Welcome to career path finder</h2>
+            </div>
         </div>
-      </div>
-      <!--Question form  -->
-      <div class="panel panel-info">
-      <div class="panel-body bg-info">
-      <form id="form">
-      <!--Name-->
-      <div class="form-group">
-        <label for="name">Please enter your name</label>
-        <input id="name" class="form-control" type="text">
-      </div>
-        <!--Question 1-->
-        <div class="form-group">
-          <label for="front-back-end">1. What type of development do you prefer?</label>
-          <select class="form-control" id="front-back-end">
-            <option>Back-end</option>
-            <option>Front-end</option>
-          </select>
+        <!--Question form  -->
+        <div class="panel panel-info">
+            <div class="panel-body bg-info">
+                <form id="form">
+                    <!--Name-->
+                    <div class="form-group">
+                        <label for="name">Please enter your name</label>
+                        <input id="name" class="form-control" type="text">
+                    </div>
+                    <!--Question 1-->
+                    <div class="form-group">
+                        <label for="front-back-end">What type of development do you prefer?</label>
+                        <select class="form-control" id="front-back-end">
+                          <option>Back-end</option>
+                          <option>Front-end</option>
+                        </select>
+                    </div>
+                    <!--Question 2 optional-->
+                    <div class="form-group" id="focus">
+                        <label for="focus">Do you enjoy focusing on layouts, navigation, colors, design?</label>
+                        <div class="radio">
+                            <label>
+                              <input type="radio" name="focus" value="yes" checked>
+                              Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                              <input type="radio" name="focus" value="no">
+                              Not really
+                            </label>
+                        </div>
+                    </div>
+                    <!--Question 3-->
+                    <div class="form-group">
+                        <label for="companysize">What type of company would you like to work in?</label>
+                        <select class="form-control" id="companysize">
+                          <option>Large company</option>
+                          <option>Small company or startup</option>
+                        </select>
+                    </div>
+                    <!--Question 4-->
+                    <div class="form-group" id="webapps">
+                        <label for="ruby">Would you like to build interactive web applications that involves users creating accounts, entering information, and interacting with dynamic content?
+                        </label>
+                        <div class="radio">
+                            <label>
+                            <input type="radio" name="ruby" value="yes" checked>
+                            Yes
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="ruby" value="no">
+                            Probably not
+                          </label>
+                        </div>
+                    </div>
+                    <!--Question 5-->
+                    <div class="form-group">
+                        <label for="type-of-software">What type of software would you like to create?</label>
+                        <select class="form-control" id="type-of-software">
+                          <option>Internal or business software</option>
+                          <option>Android applications</option>
+                          <option>Build websites</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn" id="myBtn">Submit</button>
+                </form>
+            </div>
         </div>
-        <!--Question 2 optional-->
-        <div class="form-group" id="focus">
-          <label for="focus">Do you enjoy focusing on layouts, navigation, colors, design?</label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="focus" value="yes" checked>
-              Yes
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="focus" value="no">
-              Not really
-            </label>
-          </div>
-        </div>
-        <!--Question 3-->
-        <div class="form-group">
-          <label for="companysize">2. What type of company would you like to work in?</label>
-          <select class="form-control" id="companysize">
-            <option>Large company</option>
-            <option>Small company or startup</option>
-          </select>
-        </div>
-        <!--Question 4-->
-        <div class="form-group" id="webapps">
-          <label for="ruby">Would you like to build interactive web applications that involves users creating accounts, entering information, and interacting with dynamic content?
-          </label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="ruby" value="yes" checked>
-              Yes
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="ruby" value="no">
-              Probably not
-            </label>
-          </div>
-        </div>
-        <!--Question 5-->
-        <div class="form-group">
-          <label for="type-of-software">3. What type of software would you like to create?</label>
-          <select class="form-control" id="type-of-software">
-            <option>Internal or business software</option>
-            <option>Android applications</option>
-            <option>Build websites</option>
-          </select>
+        <div id="ruby" class="panel panel-success">
+            <div class="panel-body bg-success">
+                <p>you would enjoy studying <strong>Ruby</strong>, so you can learn how to build web applications.</p>
+            </div>
         </div>
 
-        <button type="submit" class="btn">Submit</button>
-      </form>
+        <div id="java" class="panel panel-success">
+            <div class="panel-body bg-success">
+                <p>you would enjoy studying <strong>Java</strong>, so you can learn how to build Android applications.</p>
+            </div>
+        </div>
+
+        <div id="c" class="panel panel-success">
+            <div class="panel-body bg-success">
+                <p>you would enjoy studying <strong>C#</strong>, so you can learn how to build internal business software.</p>
+            </div>
+        </div>
+
+        <div id="php" class="panel panel-success">
+            <div class="panel-body bg-success">
+                <p>you would enjoy studying <strong>PHP</strong>, so you can learn how to build websites.</p>
+            </div>
+        </div>
+
+        <div id="css" class="panel panel-success">
+            <div class="panel-body bg-success">
+                <p>you would enjoy studying <strong>CSS and Design</strong>, so you can learn how to do front-end development.</p>
+            </div>
+        </div>
+        
     </div>
-    </div>
-
-      <div id ="ruby" class="panel panel-success">
-        <div class="panel-body bg-success">
-            <p>you would enjoy studying Ruby, so you can learn how to build web applications.</p>
-          </div>
-      </div>
-
-      <div id ="java" class="panel panel-success">
-        <div class="panel-body bg-success">
-            <p>you would enjoy studying Java, so you can learn how to build Android applications.</p>
-          </div>
-      </div>
-
-      <div id ="c" class="panel panel-success">
-        <div class="panel-body bg-success">
-            <p>you would enjoy studying C#, so you can learn how to build internal business software.</p>
-          </div>
-      </div>
-
-      <div id ="php" class="panel panel-success">
-        <div class="panel-body bg-success">
-            <p>you would enjoy studying PHP, so you can learn how to build websites.</p>
-          </div>
-      </div>
-
-      <div id ="css" class="panel panel-success">
-        <div class="panel-body bg-success">
-            <p>you would enjoy studying CSS and Design, so you can learn how to do front-end development.</p>
-          </div>
-      </div>
-
-    </div>
-  </body>
-  </head>
+</body>
+</head>
