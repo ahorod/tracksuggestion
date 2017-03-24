@@ -16,14 +16,14 @@
       <form id="form">
         <!--Question 1-->
         <div class="form-group">
-          <label for="front-back-end">What type of development do you prefer?</label>
-          <select class="form-control" id="fornt-back-end">
-            <option>Front-end development</option>
+          <label for="front-back-end">1. What type of development do you prefer?</label>
+          <select class="form-control" id="front-back-end">
             <option>Back-end</option>
+            <option>Front-end</option>
           </select>
         </div>
         <!--Question 2 optional-->
-        <div class="form-group">
+        <div class="form-group" id="design">
           <label for="design">Do you enjoy focusing on layouts, navigation, colors, design?</label>
           <div class="radio">
             <label>
@@ -33,21 +33,45 @@
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="focus" value="not really">
+              <input type="radio" name="focus" value="no">
               Not really
             </label>
           </div>
         </div>
         <!--Question 3-->
         <div class="form-group">
-          <label for="size-of-company">What type of company would you like to work in?</label>
+          <label for="size-of-company">2. What type of company would you like to work in?</label>
           <select class="form-control" id="size-of-company">
             <option>Large company</option>
             <option>Small company or startup</option>
           </select>
         </div>
-
-
+        <!--Question 4-->
+        <div class="form-group">
+          <label for="ruby">Would you like to build interactive web applications that involves users creating accounts, entering information, and interacting with dynamic content?
+          </label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="ruby" value="yes" checked>
+              Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="ruby" value="no">
+              Probably not
+            </label>
+          </div>
+        </div>
+        <!--Question 5-->
+        <div class="form-group">
+          <label for="type-of-software">3. What type of software would you like to create?</label>
+          <select class="form-control" id="type-of-software">
+            <option>Internal or business software</option>
+            <option>Android applications</option>
+            <option>Build websites</option>
+          </select>
+        </div>
 
         <button type="submit" class="btn">Submit</button>
       </form>
