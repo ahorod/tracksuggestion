@@ -16,6 +16,11 @@ $(document).ready(function(){
     var companysizeInput = $("#companysize").val();
     var webappsInput = $("input:radio[name=ruby]:checked").val();
     var typeofsoftwareInput = $("#type-of-software").val();
+    $("#ruby").hide();
+    $("#c").hide();
+    $("#java").hide();
+    $("#php").hide();
+    $("#css").hide();
 
     if (frontbackendInput === "Back-end") {
       if (webappsInput === "yes"){
