@@ -9,7 +9,6 @@ $(document).ready(function(){
   }
   });
 
-
   $("#form").submit(function(event) {
     var nameInput = $("#name").val();
     var frontbackendInput = $("#front-back-end").val();
